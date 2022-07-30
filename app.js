@@ -5,6 +5,7 @@ require("./config/db");
 const userRouter = require("./routes/user.route");
 const farmerRouter = require("./routes/farmer.route");
 
+const customerRouter = require("./routes/customer.route");
 const app = express();
 
 app.use(cors());
@@ -12,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/api/users", userRouter);
 app.use("/api/farmers", farmerRouter);
+app.use("/api/customers", customerRouter);
 
 // api/users : GET
 // api/users/:id : GET
